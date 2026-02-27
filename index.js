@@ -14,7 +14,7 @@ app.use(express.json());
 const allowedOrigins = [
   "http://localhost:3000", 
   "http://localhost:5173", 
-  "http://localhost:5000", // Local backend dev
+  "http://localhost:5000", 
   "https://crypto-client-8ud9.onrender.com", // Replace with your actual URL
   "https://your-custom-domain.com", 
 ];
@@ -62,5 +62,6 @@ app.use((err, req, res, next) => {
     next(err);
   }
 });
+
 
 
