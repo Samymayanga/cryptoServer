@@ -7,7 +7,7 @@ router.put("/auth/change-password", async (req, res) => {
   try {
     const { currentPassword, newPassword } = req.body;
 
-    // Get user ID from token (you need to extract it from the authorization header)
+    
     const token = req.headers.authorization?.split(" ")[1];
 
     if (!token) {
@@ -153,3 +153,4 @@ router.delete("/auth/delete-account", async (req, res) => {
 });
 
 module.exports = router;
+
