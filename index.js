@@ -12,11 +12,11 @@ const app = express();
 app.use(express.json());
 
 const allowedOrigins = [
-  "http://localhost:3000", // Local React dev
-  "http://localhost:5173", // Local Vite dev
+  "http://localhost:3000", 
+  "http://localhost:5173", 
   "http://localhost:5000", // Local backend dev
   "https://your-frontend.vercel.app", // Replace with your actual Vercel URL
-  "https://your-custom-domain.com", // If you have a custom domain
+  "https://your-custom-domain.com", 
 ];
 
 const corsOptions = {
@@ -33,7 +33,7 @@ const corsOptions = {
     }
   },
   credentials: true,
-  optionsSuccessStatus: 200, // For legacy browser support
+  optionsSuccessStatus: 200, 
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
 };
@@ -62,3 +62,4 @@ app.use((err, req, res, next) => {
     next(err);
   }
 });
+
